@@ -44,11 +44,12 @@ module.exports = {
       name: "react_host",
       filename: "remoteEntry.js",
       remotes: {
-        remote:"remote@http://localhost:3000/remoteEntry.js"
+        remote: "remote@http://localhost:3000/remoteEntry.js",
       },
       exposes: {
-        "./Header":"./src/Header.jsx",
-        "./Footer":"./src/Footer.jsx"
+        "./Header": "./src/Header.jsx",
+        "./Footer": "./src/Footer.jsx",
+        "./products": "./src/products.js",
       },
       shared: {
         ...deps,

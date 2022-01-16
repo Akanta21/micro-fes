@@ -44,7 +44,7 @@ module.exports = {
       name: "pdp",
       filename: "remoteEntry.js",
       remotes: {
-        home:"react_host@http://localhost:9001/remoteEntry.js"
+        home: "react_host@http://localhost:9001/remoteEntry.js",
       },
       exposes: {},
       shared: {

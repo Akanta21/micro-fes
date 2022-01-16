@@ -1,21 +1,24 @@
-import React, {Suspense, lazy} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import Header from 'home/Header'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "home/Header";
+import Footer from "home/Footer";
 
-import Footer from 'home/Footer'
-
-import SafeComponent from "./SafeComponent";
+import PDPContent from "./PDPContent";
 import "./index.scss";
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <SafeComponent>
+  <Router>
+    <div className="mt-10 text-3xl mx-auto max-w-6xl">
       <Header />
-    </SafeComponent>
-    
-    
-    <div className="p-3">This is the body</div>
-    <Footer />
-  </div>
+
+      <div className="p-3">
+        <Routes>
+          <Route path="/product/:id" exact element={<PDPContent />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
+  </Router>
 );
 ReactDOM.render(<App />, document.getElementById("app"));

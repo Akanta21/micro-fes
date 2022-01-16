@@ -2,6 +2,7 @@ import React, {useRef,useEffect} from "react";
 import ReactDOM from "react-dom";
 import Header from './Header'
 import Footer from './Footer'
+import HomeContent from "./HomeContent";
 
 // import counterWrapper from "remote/counterWrapper";
 
@@ -16,7 +17,9 @@ const App = () => {
   return(
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
     <Header />
-    <div className="p-3">This is the body</div>
+    <div className="p-3">
+      <HomeContent />
+    </div>
     <Footer />
   </div>
 )};
