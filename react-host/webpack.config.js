@@ -44,6 +44,9 @@ module.exports = {
       name: "react_host",
       filename: "remoteEntry.js",
       remotes: {
+        home: "react_host@http://localhost:9001/remoteEntry.js",
+        pdp: "pdp@http://localhost:3002/remoteEntry.js",
+        cart: "cart@http://localhost:3003/remoteEntry.js",
         remote: "remote@http://localhost:3000/remoteEntry.js",
       },
       exposes: {
