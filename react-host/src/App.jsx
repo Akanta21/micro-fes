@@ -1,11 +1,11 @@
-import React, {useRef,useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Header from './Header'
-import Footer from './Footer'
+import Header from "./Header";
+import Footer from "./Footer";
 import HomeContent from "./HomeContent";
 
 // import counterWrapper from "remote/counterWrapper";
-
+import "remixicon/fonts/remixicon.css";
 import "./index.scss";
 
 const App = () => {
@@ -14,13 +14,14 @@ const App = () => {
   // useEffect(() => {
   //   counterWrapper(divRef.current)
   // }, [])
-  return(
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="p-3">
-      <HomeContent />
+  return (
+    <div className="mt-10 text-3xl mx-auto max-w-6xl">
+      <Header />
+      <div className="p-3">
+        <HomeContent />
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-)};
+  );
+};
 ReactDOM.render(<App />, document.getElementById("app"));
