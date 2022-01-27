@@ -1,27 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import Header from "./Header";
-import Footer from "./Footer";
-import HomeContent from "./HomeContent";
 
 // import counterWrapper from "remote/counterWrapper";
 import "remixicon/fonts/remixicon.css";
 import "./index.scss";
+import MainLayout from "./MainLayout";
 
-const App = () => {
-  // const divRef = useRef(null);
-
-  // useEffect(() => {
-  //   counterWrapper(divRef.current)
-  // }, [])
-  return (
-    <div className="mt-10 text-3xl mx-auto max-w-6xl">
-      <Header />
-      <div className="p-3">
-        <HomeContent />
-      </div>
-      <Footer />
-    </div>
-  );
-};
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<MainLayout />, document.getElementById("app"));
