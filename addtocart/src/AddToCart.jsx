@@ -6,7 +6,9 @@ export default ({ id }) => {
   const [loggedIn, setLoggedIn] = createSignal(false);
 
   createEffect(() => {
-    return jwt.subscribe((jwt) => setLoggedIn(!!jwt));
+    return jwt.subscribe((jwt) => {
+      setLoggedIn(!!jwt);
+    });
   });
 
   return (

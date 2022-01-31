@@ -5,11 +5,11 @@ import placeAddToCart from "addToCart/placeAddToCart";
 
 export default function PDPContent() {
   const { id } = useParams();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState();
 
   useEffect(() => {
     if (id) {
-      getProductById(id).then((product) => setProduct(product));
+      getProductById(id).then(setProduct);
     } else {
       setProduct(null);
     }
@@ -18,15 +18,12 @@ export default function PDPContent() {
   const addToCart = useRef(null);
 
   useEffect(() => {
-    console.log("called");
     if (addToCart.current) {
       placeAddToCart(addToCart.current, product.id);
     }
   }, [product]);
 
   if (!product) return null;
-
-  console.log("i am here");
 
   return (
     <div className="grid grid-cols-2 gap-5">
