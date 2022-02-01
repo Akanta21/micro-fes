@@ -8,7 +8,34 @@ export default function HomeContent() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProducts().then(setProducts);
+    getProducts().then((data) => {
+      console.log(data);
+      setProducts(data);
+    });
+
+    const source = new EventSource("http://localhost:8080/products-sse/sse");
+
+    source.addEventListener("open", (data) => {
+      console.log("SSE opened!");
+      console.log(data);
+    });
+
+    source.addEventListener("message", (e) => {
+      console.log(e.data);
+      const data = JSON.parse(e.data);
+
+      console.log("data", data.product);
+
+      setProducts(data.product);
+    });
+
+    source.addEventListener("error", (e) => {
+      console.error("Error: ", e);
+    });
+
+    return () => {
+      source.close();
+    };
   }, []);
 
   return (

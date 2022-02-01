@@ -6,11 +6,12 @@ import { EventEmitter } from 'events';
 export class EventsService {
   private readonly emitter: EventEmitter;
 
-  constructor() { // Inject some Service here and everything about SSE will stop to work.
+  constructor() {
+    // Inject some Service here and everything about SSE will stop to work.
     this.emitter = new EventEmitter();
   }
 
-  subscribe(event) {
+  subscribe(event, defaultValue?) {
     return fromEvent(this.emitter, event);
   }
 

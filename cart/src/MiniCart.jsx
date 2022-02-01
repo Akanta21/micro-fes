@@ -18,7 +18,11 @@ export default function MiniCart() {
 
   return (
     <>
-      <span onClick={() => setShowCart(!showCart)}>
+      <span
+        onClick={() => setShowCart(!showCart)}
+        onMouseEnter={() => setShowCart(true)}
+        // onMouseLeave={() => setShowCart(false)}
+      >
         <i className="ri-shopping-cart-2-fill text-2xl" id="showCart">
           {items.length}
         </i>

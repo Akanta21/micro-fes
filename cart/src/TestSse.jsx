@@ -6,15 +6,13 @@ const TestSse = () => {
   useEffect(() => {
     const source = new EventSource(`http://localhost:8080/stock`);
 
-    source.addEventListener("open", () => {
+    source.addEventListener("open", (data) => {
       console.log("SSE opened!");
     });
 
     source.addEventListener("message", (e) => {
       console.log(e.data);
       const data = JSON.parse(e.data);
-
-      console.log(data);
 
       setStock(data);
     });

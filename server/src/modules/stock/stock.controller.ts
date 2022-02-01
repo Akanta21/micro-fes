@@ -12,7 +12,7 @@ export class StockController {
 
   @Sse()
   events(@Request() req) {
-    return this.eventsService.subscribe('payment');
+    return this.eventsService.subscribe('payment', 'abc');
   }
 
   @Post('payment-status')

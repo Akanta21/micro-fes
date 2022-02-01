@@ -40,7 +40,7 @@ const products: Product[] = [
     name: 'Rainbow Flames',
     price: 7.99,
     description: 'Flaming rainbow fun for all ages.',
-    image: 'http://localhost:8080/fidget-4.jpg',
+    image: 'http://localhost:8080/fidget-11.jpg',
     longDescription:
       'Rainbow Flames are small (1.5″ in diameter or approx. 46mm) fidget spinner toys. They are fun for people of all ages, including adults and kids. Kids love to play with Rainbow Flames because they are easy to spin and they come in assorted colors, like blue, green, red, white, purple and yellow possible combinations. Rainbow Flames fidget spinners are great for killing time; perfect for daydreaming, calming nerves, focusing attention & relaxing; better than nail biting & knuckle cracking. Rainbow Flames fidget spinners can be successfully incorporated into therapy sessions as fidget toys',
   },
