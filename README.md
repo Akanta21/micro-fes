@@ -35,3 +35,8 @@ https://caniuse.com/?search=Event%20source
 
 For more information:
 - https://medium.com/tokopedia-engineering/implementing-server-sent-events-in-reactjs-c36661d89468
+
+
+### How to start?
+- Read development.sh
+- ```yarn start everywhere```
